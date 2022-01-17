@@ -1,20 +1,18 @@
+import React from 'react';
+import Video from './Video';
+import HideComments from './HideComments';
 import video from "../data/video.js";
 
 function App() {
-  console.log("Here's your data:", video);
+  
 
   return (
-    <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
-    </div>
-  );
+  <div style={{contentStyle: 'text-align:center'}}>
+    <Video video={video}/>
+    <br></br>
+    <HideComments comments={video.comments} />
+  </div>
+  )
 }
 
 export default App;
